@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "outDir": "./build",
+    "rootDir": "./",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "sourceRoot": "./src",
+    "strict": true,
+    "strictNullChecks": false,
+    "target": "es2016"
+  }
+}

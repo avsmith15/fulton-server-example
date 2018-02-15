@@ -1,0 +1,31 @@
+{
+  "name": "fulton-server-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/main.js",
+  "scripts": {
+    "start": "node ./build/main.js",
+    "start:dev": "ts-node ./src/main.ts",
+    "build": "tsc -p ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swarmnyc/fulton-server-example.git"
+  },
+  "author": "wadehuang36",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swarmnyc/fulton-server-example/issues"
+  },
+  "homepage": "https://github.com/swarmnyc/fulton-server-example#readme",
+  "dependencies": {
+    "fulton-server": "0.0.4",
+    "mongodb": "^2.2.34",
+    "swagger-ui-express": "^2.0.15"
+  },
+  "devDependencies": {
+    "ts-node": "^4.1.0",
+    "typescript": "^2.7.1"
+  }
+}
