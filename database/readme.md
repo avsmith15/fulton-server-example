@@ -4,5 +4,5 @@ The simple database is based on Northwind database from [northwind-mongo](https:
 
 To restore the database, run
 ``` bash
-mongorestore --gzip --archive=northwind-mongo.gz
+mongorestore --gzip --archive=northwind.mongodump.gz
 ```

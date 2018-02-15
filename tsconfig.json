@@ -8,10 +8,9 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "outDir": "./build",
-    "rootDir": "./",
+    "rootDir": "./src",
     "skipLibCheck": true,
     "sourceMap": true,
-    "sourceRoot": "./src",
     "strict": true,
     "strictNullChecks": false,
     "target": "es2016"
