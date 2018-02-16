@@ -8,6 +8,7 @@ import { Employee } from './entities/employee';
 import { EmployeeRouter } from "./routers/employee-router";
 import { Territory } from './entities/territory';
 import { TerritoryRouter } from './routers/territory-router';
+import { MeRouter } from './routers/me';
 
 export class NorthWindApp extends FultonApp {
     protected onInit(options: FultonAppOptions): void {
@@ -30,10 +31,17 @@ export class NorthWindApp extends FultonApp {
             CategoryRouter,
             CustomerRouter,
             EmployeeRouter,
-            TerritoryRouter
+            TerritoryRouter,
+            MeRouter
         ];
 
         // use loader to register service
         options.loader.serviceLoaderEnabled = true;
+
+        // enable identity
+        options.identity.enabled = true;
+
+        // make the tokens live 10 years long
+        options.identity.accessToken.duration = 315576000
     }
 }

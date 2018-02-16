@@ -22,7 +22,7 @@
   "homepage": "https://github.com/swarmnyc/fulton-server-example#readme",
   "dependencies": {
     "dotenv": "^5.0.0",
-    "fulton-server": "0.0.4",
+    "fulton-server": "0.0.5",
     "mongodb": "^2.2.34",
     "swagger-ui-express": "^2.0.15"
   },

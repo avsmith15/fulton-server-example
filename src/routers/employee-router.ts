@@ -1,10 +1,7 @@
 import { Employee } from '../entities/employee';
-import { EntityRouter, entityRouter } from 'fulton-server';
+import { EntityRouter, entityRouter, authorized } from 'fulton-server';
 
-@entityRouter("/employees", Employee)
+// needs logged in use to visit /employees 
+@entityRouter("/employees", Employee, authorized())
 export class EmployeeRouter extends EntityRouter<Employee>{
-
-    list(req:any, res:any){
-        super.list(req, res, null);
-    }
 }
