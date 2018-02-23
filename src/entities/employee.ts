@@ -3,7 +3,7 @@ import { Territory } from './territory';
 
 @entity("employees")
 export class Employee {
-    @idColumn() // the _id property, but the type isn't object id
+    @idColumn() // idColumn() is for the _id property, but the type isn't object id    
     employeeId: number;
 
     @column()

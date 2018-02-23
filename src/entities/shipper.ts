@@ -1,16 +1,13 @@
 import { entity, objectIdColumn, column, idColumn } from "fulton-server";
 
-@entity("categories")
-export class Category {
+@entity("shippers")
+export class Shipper {
     @idColumn() // idColumn() is for the _id property, but the type isn't object id
-    categoryId: number;
+    id: number;
 
     @column()
-    categoryName: string;
+    companyName: string;
 
     @column()
-    description: string;
-
-    @column()
-    picture: string;
+    phone: string;
 }

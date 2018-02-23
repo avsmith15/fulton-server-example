@@ -2,7 +2,7 @@ import { entity, objectIdColumn, column, idColumn } from "fulton-server";
 
 @entity("customers")
 export class Customer {
-    @idColumn() // the _id property, but the type isn't object id
+    @idColumn() // idColumn() is for the _id property, but the type isn't object id
     customerId: string;
 
     @column()
