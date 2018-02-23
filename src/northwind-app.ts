@@ -9,6 +9,13 @@ import { EmployeeRouter } from "./routers/employee-router";
 import { Territory } from './entities/territory';
 import { TerritoryRouter } from './routers/territory-router';
 import { MeRouter } from './routers/me';
+import { RegionRouter } from "./routers/region-router";
+import { Region } from "./entities/regions";
+import { Order } from "./entities/order";
+import { Supplier } from './entities/supplier';
+import { Shipper } from "./entities/shipper";
+import { Product } from "./entities/product";
+import { SupplierRouter } from './routers/supplier-router';
 
 export class NorthWindApp extends FultonApp {
     protected onInit(options: FultonAppOptions): void {
@@ -23,6 +30,11 @@ export class NorthWindApp extends FultonApp {
             Category,
             Customer,
             Employee,
+            Order,
+            Product,
+            Region,
+            Shipper,
+            Supplier,
             Territory
         ];
 
@@ -31,8 +43,10 @@ export class NorthWindApp extends FultonApp {
             CategoryRouter,
             CustomerRouter,
             EmployeeRouter,
+            MeRouter,
+            RegionRouter,
+            SupplierRouter,
             TerritoryRouter,
-            MeRouter
         ];
 
         // use loader to register service
