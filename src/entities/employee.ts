@@ -1,12 +1,9 @@
-import { entity, objectIdColumn, column, relatedTo } from "fulton-server";
+import { entity, objectIdColumn, column, relatedTo, idColumn } from "fulton-server";
 import { Territory } from './territory';
 
 @entity("employees")
 export class Employee {
-    @objectIdColumn({ type: Number }) // if the type isn't ObjectId, you needs give the type
-    id: number;
-
-    @column()
+    @idColumn() // the _id property, but the type isn't object id
     employeeId: number;
 
     @column()
@@ -64,3 +61,6 @@ export class Employee {
     @relatedTo(Territory)
     territories: Territory[];
 }
+
+console.log(Date)
+console.log(Reflect.getMetadata("design:type", Employee.prototype, "birthDate"))

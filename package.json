@@ -2,13 +2,12 @@
   "name": "fulton-server-example",
   "version": "1.0.0",
   "description": "",
-  "main": "./build/main.js",
   "scripts": {
+    "clean": "rimraf ./build",
     "start": "node -r dotenv/config ./build/main.js",
     "start:dev": "ts-node -r dotenv/config ./src/main.ts",
     "debug": "ts-node --inspect=9229 -r dotenv/config ./src/main.ts",
-    "build": "tsc -p ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && tsc -p ./"
   },
   "repository": {
     "type": "git",
@@ -22,12 +21,14 @@
   "homepage": "https://github.com/swarmnyc/fulton-server-example#readme",
   "dependencies": {
     "dotenv": "^5.0.0",
-    "fulton-server": "0.0.5",
+    "fulton-server": "0.0.8",
     "mongodb": "^2.2.34",
-    "swagger-ui-express": "^2.0.15"
+    "swagger-ui-express": "^2.0.15",
+    "typeorm": "^0.1.12"
   },
   "devDependencies": {
-    "ts-node": "^4.1.0",
-    "typescript": "^2.7.1"
+    "rimraf": "^2.6.2",
+    "ts-node": "^5.0.0",
+    "typescript": "^2.7.2"
   }
 }

@@ -1,16 +1,16 @@
-import { entity, objectIdColumn, column } from "fulton-server";
+import { entity, objectIdColumn, column, idColumn } from "fulton-server";
 
 @entity("categories")
 export class Category {
-    @objectIdColumn({type: "number"}) // if the type isn't ObjectId, you needs give the type
+    @idColumn() // the _id property, but the type isn't object id
     categoryId: number;
 
     @column()
-    categoryName:string;
+    categoryName: string;
 
     @column()
-    description:string;
+    description: string;
 
     @column()
-    picture:string;
+    picture: string;
 }

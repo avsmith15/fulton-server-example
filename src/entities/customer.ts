@@ -1,8 +1,8 @@
-import { entity, objectIdColumn, column } from "fulton-server";
+import { entity, objectIdColumn, column, idColumn } from "fulton-server";
 
 @entity("customers")
 export class Customer {
-    @objectIdColumn()
+    @idColumn() // the _id property, but the type isn't object id
     customerId: string;
 
     @column()

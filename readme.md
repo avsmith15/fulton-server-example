@@ -32,8 +32,8 @@ npm run start:dev
 
 5. Run in Postman
 
-we provided series of API calls in Postman, you can hit this button
+   we provided series of API calls in Postman, you can hit this button
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/492498ddaab5a69c4d87)
+   [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/492498ddaab5a69c4d87)
 
-to test the APIs.
+   to test the APIs.

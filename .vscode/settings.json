@@ -1,0 +1,6 @@
+{
+    "favorites.resources": [
+        "node_modules\\fulton-server",
+        "node_modules\\typeorm"
+    ]
+}
