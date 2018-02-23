@@ -61,6 +61,3 @@ export class Employee {
     @relatedTo(Territory)
     territories: Territory[];
 }
-
-console.log(Date)
-console.log(Reflect.getMetadata("design:type", Employee.prototype, "birthDate"))

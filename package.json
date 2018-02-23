@@ -5,8 +5,8 @@
   "scripts": {
     "clean": "rimraf ./build",
     "start": "node -r dotenv/config ./build/main.js",
-    "start:dev": "ts-node -r dotenv/config ./src/main.ts",
-    "debug": "ts-node --inspect=9229 -r dotenv/config ./src/main.ts",
+    "start:dev": "ts-node -r dotenv/config --typeCheck=true ./src/main.ts",
+    "debug": "ts-node --inspect=9229 -r dotenv/config --typeCheck=true ./src/main.ts",
     "build": "npm run clean && tsc -p ./"
   },
   "repository": {
