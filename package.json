@@ -7,7 +7,6 @@
     "start": "node -r dotenv/config ./build/main.js",
     "start:dev": "ts-node --typeCheck=true -r dotenv/config ./src/main.ts",
     "start:debug": "ts-node --inspect-brk=9999 --typeCheck=true -r dotenv/config ./src/main.ts",
-    "start:debug:js": "node --inspect-brk=9999 -r dotenv/config ./build/main.js",
     "build": "npm run clean && tsc -p ./"
   },
   "repository": {
@@ -29,7 +28,7 @@
   },
   "devDependencies": {
     "rimraf": "^2.6.2",
-    "ts-node": "^5.0.0",
+    "ts-node": "^3.3.0",
     "typescript": "^2.7.2"
   }
 }

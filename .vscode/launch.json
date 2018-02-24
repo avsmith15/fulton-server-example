@@ -15,18 +15,6 @@
                 "start:debug"
             ],
             "port": 9999
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch start:debug:js",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run",
-                "start:debug:js"
-            ],
-            "port": 9999
         }
     ]
 }

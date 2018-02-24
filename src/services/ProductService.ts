@@ -1,4 +1,4 @@
-import { Service, EntityServiceFactory, IEntityService, OperationResult, Helper } from 'fulton-server';
+import { Service, EntityServiceFactory, IEntityService, OperationResult, Helper, inject, DiKeys } from 'fulton-server';
 import { Product } from '../entities/product';
 import { Supplier } from '../entities/supplier';
 
@@ -6,7 +6,7 @@ export class ProductService extends Service {
     supplierEs: IEntityService<Supplier>;
     productEs: IEntityService<Product>;
 
-    constructor(factory: EntityServiceFactory) {
+    constructor(@inject(DiKeys.EntityServiceFactory) factory: EntityServiceFactory) {
         super();
         this.supplierEs = factory(Supplier)
         this.productEs = factory(Product)
@@ -14,10 +14,8 @@ export class ProductService extends Service {
 
     async findBySupplierName(supplierName: string): Promise<OperationResult<Product>> {
         let findOneResult = await this.supplierEs.findOne({
-            filter: { companyName: { $regex: Helper.escapedRegexp(supplierName) } }
+            filter: { companyName: { $regex: Helper.escapedRegexp(supplierName, "i") } }
         })
-
-        console.log(Helper.escapedRegexp(supplierName));
 
         if (findOneResult.data == null) {
             return {
