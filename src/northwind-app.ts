@@ -56,6 +56,8 @@ export class NorthWindApp extends FultonApp {
         options.identity.enabled = true;
 
         // make the tokens live 10 years long
-        options.identity.accessToken.duration = 315576000
+        options.identity.accessToken.duration = 315576000;
+
+        options.server.httpsEnabled = true;
     }
 }
