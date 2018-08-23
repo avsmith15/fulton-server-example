@@ -1,0 +1,11 @@
+{
+  "databases": {
+    "default": "mongodb"
+  },
+  "features": [
+    "identity",
+    "oauth-google",
+    "api-docs"
+  ],
+  "version": "0.0.29"
+}

@@ -1,8 +1,8 @@
-import { FultonAppLauncher } from 'fulton-server';
+import { AppLauncher } from 'fulton-server';
 import { NorthWindApp } from './northwind-app';
 import { ProductService } from './services/ProductService';
 
-FultonAppLauncher
+AppLauncher
     .create(NorthWindApp)
     .task("sample_task", (app: NorthWindApp) => {
         // TODO: better example

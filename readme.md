@@ -2,38 +2,65 @@
 
 This is an example to show you how to use Fulton Server. It has a related [tutorial](https://swarmnyc.gitbooks.io/fulton/content/server/get-start.html). You can read the tutorial to get more detailed information.
 
-# Requirements
+## Get Started
+There are three ways to run this project.
+
+### 1. From this source code and run locally
+
+**Requirements**
 - Nodejs >= 7.0
-- Mongodb >= 2.0
+- Mongodb >= 3.0
 
-# Installation
-
-1. Restore Northwind database
+1. clone or download this project
+2. Restore Northwind database
 ``` bash
 mongorestore --gzip --archive=./database/northwind.agz
 ```
-
-2. Install npm packages
+3. Install npm packages
 ``` bash
 npm install
 ```
 
-3. Build the script and Run
+4. Build the script and Run
 ``` bash
-# method 1
-npm run build
-npm run start
+# method 1, dev version, use ts-node
+npm start
 
-# method 2
-npm run start:dev
+# method 2, production version
+npm run build
+npm run start:prod
 ```
 
-4. Visits http://localhost:3000/docs to see the API documentation.
+### 2. From this source code and run in docker
+**Requirements**
+- Docker
 
-5. Run in Postman
+The docker build script composes the mongo and node in a image. Use these commands to build a docker image and start a docker container.
 
-   we provided series of API calls in Postman, you can hit this button
+1. clone or download this project
 
-   [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/492498ddaab5a69c4d87)
+2. run these commands
 
-   to test the APIs.
+``` bash
+npm run build:docker
+npm run start:docker
+```
+
+### 3. Use Our Pre-Built Docker Image
+
+**Requirements**
+- Docker
+
+We have prepared a docker image in docker hub to cut the time and build the image. Use this command to and start a docker container.
+
+``` bash
+docker run --rm -p 3000:3000 wadehuang36/fulton-server-example 
+```
+
+## API Documents
+Visit http://localhost:3000/docs to see the API documentation. If you cannot see the api page, it means there are some things wrong.
+
+## Example API calls
+we provided series of API calls in Postman, you can hit this button
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/492498ddaab5a69c4d87) to test the APIs.

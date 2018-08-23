@@ -4,10 +4,12 @@
   "description": "",
   "scripts": {
     "clean": "rimraf ./build",
-    "start": "node -r dotenv/config ./build/main.js",
-    "start:dev": "ts-node --typeCheck=true -r dotenv/config ./src/main.ts",
+    "start": "ts-node --typeCheck=true -r dotenv/config ./src/main.ts",
+    "start:prod": "node -r dotenv/config ./build/main.js",
+    "start:docker": "docker run --rm -p 3000:3000 fulton-server-example",
     "start:debug": "ts-node --inspect-brk=9999 --typeCheck=true -r dotenv/config ./src/main.ts",
-    "build": "npm run clean && tsc -p ./"
+    "build": "npm run clean && tsc -p ./",
+    "build:docker": "npm run build && docker build -t fulton-server-example ."
   },
   "repository": {
     "type": "git",
@@ -20,15 +22,25 @@
   },
   "homepage": "https://github.com/swarmnyc/fulton-server-example#readme",
   "dependencies": {
-    "dotenv": "^5.0.0",
-    "fulton-server": "0.0.11",
-    "mongodb": "^2.2.34",
-    "swagger-ui-express": "^2.0.15",
-    "typeorm": "^0.1.12"
+    "class-validator": "^0.9.1",
+    "dotenv": "^6.0.0",
+    "fulton-server": "^0.1.0",
+    "google-auth-library": "^1.6.1",
+    "jws": "^3.1.5",
+    "mongodb": "^3.1.3",
+    "passport": "^0.4.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-local": "^1.0.0",
+    "password-hash": "^1.2.2",
+    "swagger-ui-express": "^3.0.10",
+    "typeorm": "^0.2.7",
+    "validator": "^10.6.0"
   },
   "devDependencies": {
+    "@types/node": "^10.7.1",
+    "@types/passport": "^0.4.6",
     "rimraf": "^2.6.2",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.7.2"
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
   }
 }

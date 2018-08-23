@@ -19,7 +19,7 @@ export class ProductService extends Service {
 
         if (findOneResult.data == null) {
             return {
-                errors: findOneResult.errors || { message: "invalid supplier name" }
+                error: findOneResult.error || { message: "invalid supplier name" }
             }
         }
 

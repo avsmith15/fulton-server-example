@@ -8,7 +8,6 @@ import { Employee } from './entities/employee';
 import { EmployeeRouter } from "./routers/employee-router";
 import { Territory } from './entities/territory';
 import { TerritoryRouter } from './routers/territory-router';
-import { MeRouter } from './routers/me';
 import { RegionRouter } from "./routers/region-router";
 import { Region } from "./entities/regions";
 import { Order } from "./entities/order";
@@ -19,11 +18,7 @@ import { SupplierRouter } from './routers/supplier-router';
 
 export class NorthWindApp extends FultonApp {
     protected onInit(options: FultonAppOptions): void {
-        // enable swagger docs
-        options.docs.enabled = true;
-
-        // enable jsonapi
-        options.formatter.jsonApi = true;
+        // some options are defined in .env files
 
         // register entities
         options.entities = [
@@ -43,21 +38,12 @@ export class NorthWindApp extends FultonApp {
             CategoryRouter,
             CustomerRouter,
             EmployeeRouter,
-            MeRouter,
             RegionRouter,
             SupplierRouter,
             TerritoryRouter,
         ];
 
-        // use loader to register service
-        options.loader.serviceLoaderEnabled = true;
-
-        // enable identity
-        options.identity.enabled = true;
-
         // make the tokens live 10 years long
         options.identity.accessToken.duration = 315576000;
-
-        options.server.httpsEnabled = true;
     }
 }
