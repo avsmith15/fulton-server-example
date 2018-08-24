@@ -1,6 +1,6 @@
 # Fulton Server Example
 
-This is an example to show you how to use Fulton Server. It has a related [tutorial](https://swarmnyc.gitbooks.io/fulton/content/server/get-start.html). You can read the tutorial to get more detailed information.
+This is an example on how to use [Fulton-Server](https://github.com/swarmnyc/fulton/tree/master/fulton-server). It has a related [tutorial](https://swarmnyc.gitbooks.io/fulton/content/server/get-start.html). You can read the tutorial to get more detailed information.
 
 ## Get Started
 There are three ways to run this project.
@@ -31,7 +31,7 @@ npm run build
 npm run start:prod
 ```
 
-### 2. From this source code and run in docker
+### 2. From this source code, run in docker
 **Requirements**
 - Docker
 
@@ -51,16 +51,16 @@ npm run start:docker
 **Requirements**
 - Docker
 
-We have prepared a docker image in docker hub to cut the time and build the image. Use this command to and start a docker container.
+We have prepared a docker image in docker hub to cut the time for building the image. Use this command to start a docker container.
 
 ``` bash
 docker run --rm -p 3000:3000 wadehuang36/fulton-server-example 
 ```
 
 ## API Documents
-Visit http://localhost:3000/docs to see the API documentation. If you cannot see the api page, it means there are some things wrong.
+Visit http://localhost:3000/docs to see the API documentation. If you cannot see the api page, it means there is something wrong.
 
 ## Example API calls
-we provided series of API calls in Postman, you can hit this button
+We provided a series of API calls in Postman. Hit the button below to test:
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/492498ddaab5a69c4d87) to test the APIs.
